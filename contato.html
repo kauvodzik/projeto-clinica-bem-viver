@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Clínica Bem Viver | Contato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    nav {
+      background-color: #007b80;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header img {
+      width: 100px;
+      margin: 10px;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #007b80;
+    }
+    .info-contato {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .info-contato p strong {
+      display: inline-block;
+      min-width: 80px;
+    }
+    .imagem-contato {
+      display: block;
+      margin: 0 auto 30px;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007b80;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #005f66;
+    }
+    #mensagem-sucesso {
+      display: none;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #007b80;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre a Clínica</a></li>
+      <li><a href="horario.html">Horário de Atendimento</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Logo -->
+  <header>
+    <img src="logo-clinica-v2.png" alt="Logo da Clínica Bem Viver">
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h1>Fale com a gente</h1>
+
+    <div class="info-contato">
+      <p><strong>Telefone:</strong> (51) 12345-6789</p>
+      <p><strong>WhatsApp:</strong> (51) 91234-5678</p>
+      <p><strong>Endereço:</strong> Rua Rubens Alves, 456 - Bairro São Gonçalves - São Paulo/SP</p>
+    </div>
+
+    <!-- Imagem humanizada -->
+    <img src="download.jpg" alt="Profissional da saúde segurando a mão de um paciente" class="imagem-contato">
+
+    <!-- Formulário -->
+    <form id="form-contato" onsubmit="mostrarMensagem(event)">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="assunto">Assunto:</label>
+      <input type="text" id="assunto" name="assunto" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+    </form>
+
+    <!-- Mensagem de sucesso -->
+    <p id="mensagem-sucesso">Formulário enviado com sucesso! Entraremos em contato em breve.</p>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Clínica Bem Viver — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script JS -->
+  <script>
+    function mostrarMensagem(event) {
+      event.preventDefault();
+      document.getElementById("mensagem-sucesso").style.display = "block";
+      document.getElementById("form-contato").reset();
+    }
+  </script>
+
+</body>
+</html>
