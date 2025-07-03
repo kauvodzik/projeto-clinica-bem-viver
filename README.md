@@ -16,7 +16,7 @@ O foco foi desenvolver uma estrutura completa de navegação, conteúdo informat
 
 ## 🔗 Link do Projeto
 
-🔗 [Clique aqui para acessar o site](http://127.0.0.1:5500/index.html)
+🔗 [Clique aqui para acessar o site](https://kauvodzik.github.io/projeto-clinica-bem-viver/)
 
 ---
 
